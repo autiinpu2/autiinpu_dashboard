@@ -1,0 +1,4 @@
+flask
+waitress
+psutil
+flask_socketio
