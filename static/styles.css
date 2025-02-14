@@ -83,8 +83,8 @@ body {
 }
 
 .stat-button {
-    width: 200px;
-    height: 120px;
+    width: 240px;
+    height: 140px;
     border: 3px solid black;
     border-radius: 20px;
     display: flex;
