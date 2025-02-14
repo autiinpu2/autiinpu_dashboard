@@ -10,26 +10,27 @@ app = Flask(__name__, template_folder='frontend', static_folder='static')
 def home():
     return render_template('index.html')
 
+
 def get_perf_values():
     cpu_usage = psutil.cpu_percent(interval=1)
     ram_usage = psutil.virtual_memory().percent
     network_usage_dl = psutil.net_io_counters().bytes_recv
     network_usage_ul = psutil.net_io_counters().bytes_sent
     if network_usage_dl > 1000000:
-        network_usage_dl = str(round(network_usage_dl / 1000000/8)) + ' MO'
+        network_usage_dl = str(round(network_usage_dl / 1000000)) + ' MB'
     elif network_usage_dl > 1000:
-        network_usage_dl = str(round(network_usage_dl / 1000/8)) + ' KO'
+        network_usage_dl = str(round(network_usage_dl / 1000)) + ' KB'
     elif network_usage_dl > 1:
-        network_usage_dl = str(round(network_usage_dl / 8)) + ' O'
+        network_usage_dl = str(round(network_usage_dl)) + ' B'
     else:
         network_usage_dl = "No connexion"
 
     if network_usage_ul > 1000000:
-        network_usage_ul = str(round(network_usage_ul / 1000000/8)) + ' MO'
+        network_usage_ul = str(round(network_usage_ul / 1000000)) + ' MB'
     elif network_usage_ul > 1000:
-        network_usage_ul = str(round(network_usage_ul / 1000/8)) + ' KO'
+        network_usage_ul = str(round(network_usage_ul / 1000)) + ' KB'
     elif network_usage_ul > 1:
-        network_usage_ul = str(round(network_usage_ul / 8)) + ' O'
+        network_usage_ul = str(round(network_usage_ul)) + ' B'
     else:
         network_usage_ul = "No connexion"
 
@@ -54,4 +55,4 @@ def get_usage():
 
 if __name__ == '__main__':
     port = int(os.environ.get('PORT', 5000))
-    app.run(debug=True, port=port)
+    app.run(debug=True, port=port, host='0.0.0.0')
