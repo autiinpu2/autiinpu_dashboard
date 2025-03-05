@@ -58,7 +58,7 @@ def get_perf_values():
 
 
 @app.route('/perf')
-def get_perf_usage():   
+def get_perf_usage():
     cpu_usage, ram_usage, network_usage_dl, network_usage_ul = get_perf_values()
     return render_template('perf.html', cpu_usage=cpu_usage, ram_usage=ram_usage, network_usage_dl=network_usage_dl, network_usage_ul=network_usage_ul)
 
