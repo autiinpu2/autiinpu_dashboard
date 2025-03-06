@@ -74,6 +74,10 @@ def get_usage():
     }
     return jsonify(data)
 
+@app.route('/settings')
+def settings():
+    return render_template('settings.html')
+
 if __name__ == '__main__':
     port = int(os.environ.get('PORT', 5000))
     app.run(debug=True, port=port, host='0.0.0.0')
