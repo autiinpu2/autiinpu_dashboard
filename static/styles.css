@@ -11,7 +11,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #f9f9f9; /* Light Gray Background */
+    background-color: #FAF3DD; /* Light Gray Background */
 }
 
 .content {
@@ -22,7 +22,7 @@ body {
     flex-direction: column;
     align-items: center;
     padding: 20px;
-    background-color: #ffffff;
+    background-color: #FAF3DD;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
@@ -30,8 +30,8 @@ body {
 .sidebar {
     width: 20vw;
     height: 100vh;
-    background: #d1e7dd; /* Light Mint Green */
-    color: #333;
+    background: #B8F2E6; /* Light Mint Green */
+    color: #5E6472;
     padding-top: 8vh;
     position: fixed;
     left: 0;
@@ -54,13 +54,13 @@ body {
     background: none;
     border-radius: 1vh;
     cursor: pointer;
-    color: #333;
+    color: #5E6472;
     text-align: center;
     transition: background 0.3s ease-in-out;
 }
 
 .sidebar button:hover {
-    background: #bcd0c7; /* Light Gray-Green */
+    background: #AED9E0; /* Light Gray-Green */
 }
 
 .sidebar a {
@@ -104,13 +104,11 @@ body {
     font-family: Arial, sans-serif;
     font-size: 18px;
     font-weight: bold;
-    background-color: #ffffff; /* White Background */
+    background-color: #FDCDBE; /* White Background */
     box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
-    transition: background-color 0.3s ease-in-out;
 }
-
 .stat-button:hover {
-    background-color: #f0f8ff; /* Alice Blue */
+    background: linear-gradient(to bottom right, #FDCDBE, #ff9473); /* Alice Blue */
     cursor: pointer;
 }
 
@@ -134,7 +132,7 @@ body {
 #dynamic-content {
     width: 600px;
     height: 360px;
-    border: 3px solid #d1e7dd; /* Light Mint Green Border */
+    border: 3px solid #000000; /* Light Mint Green Border */
     border-radius: 20px;
     display: flex;
     flex-direction: column;
@@ -143,7 +141,7 @@ body {
     font-family: Arial, sans-serif;
     font-size: 18px;
     font-weight: bold;
-    background-color: #ffffff; /* White Background */
+    background-color: #FDCDBE; /* White Background */
     box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
 }
 
@@ -157,7 +155,7 @@ body {
     justify-content: center;
     font-family: Arial, sans-serif;
     font-size: 18px;
-    background-color: #ffffff;
+    background-color: #FDCDBE;
     box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
     transition: background-color 0.3s ease-in-out;
     margin-top: 1rem;
@@ -184,7 +182,6 @@ body {
   .checkbox-wrapper-51 .toggle {
     position: relative;
     display: block;
-
     width: 63px;
     height: 24px;
     cursor: pointer;
@@ -234,7 +231,7 @@ body {
   }
   
   .checkbox-wrapper-51 input[type="checkbox"]:checked + .toggle:before {
-    background: #1175c7;
+    background: #ff784e;
   }
   
   .checkbox-wrapper-51 input[type="checkbox"]:checked + .toggle span {
@@ -246,29 +243,3 @@ body {
     stroke-dasharray: 25;
     stroke-dashoffset: 25;
   }
-
-
-
-/* dark-mode
-.sidebar {
-    background: #5FAB88;
-    color: #ffffff;
-}
-.sidebar button:hover {
-    background: #3A6B5C;
-}
-
-.label {
-    color: #ffffff;
-}
-
-.content {
-    background-color: #5C5C5C;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.content a {
-    color: #ffffff;
-}
-
-*/
